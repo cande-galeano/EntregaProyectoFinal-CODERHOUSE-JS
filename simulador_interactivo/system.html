@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <title>System</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="system.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h1 class="jumbotron">Turnos</h1>
+                <button id="salir" class="csbutton">Cerrar sesión</button>
+                <table id="grid" class="table table-striped">
+                    <thead>
+                        <tr class="tits">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Día</th>
+                            <th>Horario</th>
+                            <th>Servicio</th>
+                            <th style="width: 80px;">
+
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="nombre" type="text" class="form-control" />
+                            </th>
+                            <th>
+                                <input id="apellido" type="text" class="form-control" />
+                            </th>
+                            <th>
+                                <select id="dia" class="form-control">
+                                    <option value="0">Seleccione</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miercoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                    <option value="sabado">Sábado</option>                                  
+                                  </select>
+                            </th>
+                            <th>
+                                <select id="horario" class="form-control">
+                                    <option value="0">Seleccione</option>
+                                    <option value="mañana">10-13 hs.</option>
+                                    <option value="tarde">13-17 hs.</option>
+                                    <option value="noche">17-20 hs.</option>
+                                  </select>
+                            </th>
+                            <th>
+                                <input id="servicio" type="text" class="form-control" />
+                            </th>
+                            <th>
+                                <button id="btn-add" class="csbutton1">Agregar</button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="system.js"></script>
+</body>
+
+</html>

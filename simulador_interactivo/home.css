@@ -1,0 +1,408 @@
+@charset "utf-8";
+
+/*GENERALES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color:#191919;
+    
+}
+
+body {
+    max-height: 100vh;
+    max-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*HEADER Y MENU*/
+
+header {
+    background-color:white;
+}
+
+.hamburguesa{
+    background-color:white;
+    margin: auto;   
+    display: flex;
+	align-content: flex-end;
+    justify-content: space-between;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 9999;
+    padding-left:1em;
+    padding-right: 1em;
+    align-items: center;
+}
+
+header nav a {
+    padding: .5em 1em;
+    font-weight: bold;
+}
+
+#llamamenu {
+    background-color:#E43813;
+    border-radius: 0.5em;
+    border: none;  
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    position: relative;
+    z-index: 9999;
+    color:white;
+    cursor: pointer;
+    margin-top:1em;
+    margin: 2em;
+}
+
+#llamamenu i { 
+    padding: 0;
+    margin: auto;
+    
+}
+
+header nav ul {
+    position: fixed;
+    left: 100%;
+    height: 100%;
+    width: 60%;
+    top:0;
+    z-index: 9000;
+    padding-top: 3.5em;
+    border-radius: 0% 0% 0% 50%;
+    
+}
+header nav ul li {
+    
+    margin: 0.4em;
+    padding:0.5em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 25px;
+    text-align: center;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+header nav ul li a{
+    color: #191919;
+    font-size:0.9em;
+    text-decoration: none;
+    font-weight: 400;
+    
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    color:#E43813;
+    transition: all .5s ease;
+}
+.logo{
+    width: 3.5em;
+    margin: 0.7em;
+}
+
+.spanusu {
+    color: #191919;
+    font-size:0.9em;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.btnsalir {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #E43813;
+    border-radius: 12px;
+    font-weight: 400;
+    border-color: #E43813;
+    padding: 0.5em;
+    outline: none;
+    
+}
+
+.btnsalir:hover {
+    color: #191919;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 620px){
+   
+    #llamamenu {
+        display: none;
+}
+    header nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        background: none;
+        position: relative;
+        height: auto;
+        width: 100%;
+        left: auto;
+        padding-top: 0;
+       
+}
+    .visible {
+        left: 0;
+}
+    header nav ul {
+        padding-right: .5em;
+
+}
+    header nav ul li {
+        font-size: 20px;
+        padding: .2em .3em;        
+
+}
+
+    header nav a {
+        color: white;
+
+      
+}
+    
+    .logo{
+        margin-left: 6em;
+    }
+    
+}
+
+
+@media (min-width: 1200px){
+    
+/*BAJADA*/
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 7em;
+    margin-left: 7.5em;
+    font-size: 2.5em;
+   }
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 0.7em;
+    margin-left: 14.5em;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 5em;
+   }
+
+   .naranja {
+    color: #E43813;
+}
+
+.typ {
+    width: 8.7em;
+    margin-top: -14.5em;
+    margin-right: 20em;
+    float: right;
+    margin-bottom: 5em;
+}
+
+
+/*PASOS*/
+
+
+.pasos {
+    background-color: #E43813;
+    display: flex;
+    align-items:center;
+    padding-left: 9.5em;
+    margin-top: 2em;
+
+}
+
+.pasos h3 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+    text-align: center;
+
+}
+
+.pasos p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.paso1 {
+    padding: 2em;
+}
+
+.paso2 {
+    padding: 2em;
+}
+
+.paso3 {
+    padding: 2em;
+}
+
+.paso4 {
+    padding: 2em;
+}
+
+.paso1 .tijeras {
+width: 10em;
+padding-top: 0.7em;
+padding-left: 7em;
+
+}
+
+.paso2 .presupuesto {
+width: 10em;
+padding-top: 0.7em;
+padding-left: 7em;    
+}
+
+.paso3 .reloj {
+width: 9em;
+padding-top: 0.7em;
+padding-left: 6em;
+}
+
+.paso4 .asiento {
+width: 14em;
+padding-top: 0.7em;
+padding-left: 11em;
+}
+
+
+/*HORARIOS*/
+
+.horariosysuc {
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    margin:auto;
+    text-align: center;
+    padding: 5em;
+}
+.horariosysuc h3 {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.sucs {
+    font-weight: 450;
+    font-size:1.1em;
+}
+
+.suc1 {
+    font-weight: 350;
+    font-size: 0.9em;
+    padding:1em;
+}
+
+.suc2 {
+    font-weight: 350;
+    font-size: 0.9em;
+    padding:0.5em;
+}
+
+
+/*PIE*/
+
+footer{
+    padding-top: 3em;
+    background-color: white;
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    justify-items: self-start;
+    width: 9em;
+    height: auto;
+    margin-left: 4em;
+    padding-bottom: 1em;
+
+}
+
+.linea {
+    margin-left: 3.7em;
+    margin-right: 4em;
+    margin-top: 3em;
+    color: #E43813;
+}
+
+.pie {
+    font-family: 'Poppins', sans-serif;
+    color: #191919;
+    font-weight: 400;
+    font-size: 0.7em;
+    padding-left: 5.2em;
+    padding-top: 2em;
+    padding-bottom: 0.8em;
+}
+
+.foots{
+    font-family: 'Poppins', sans-serif;
+    color: #191919;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+    margin-top: -3.5em;
+}
+
+.foot12:hover{
+    text-decoration: underline;
+    transition: 0.5s ease;
+}
+
+.foot1{
+margin-left: 5em;
+}
+
+.foot2{
+    margin-left: -12em;
+    }
+
+.foot3{
+        margin-left: -12em;
+        }
+    
+
+
+h4 {
+    color: #E43813;
+    font-size: 1.2em;
+}
+.foot12 {
+    font-size: 0.9em;
+    color: #191919;
+    list-style: none;
+    text-decoration: none;
+}
+
+}

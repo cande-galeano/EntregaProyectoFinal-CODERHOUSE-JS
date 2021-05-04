@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="turnos.css">
+    
+
+    <title>Simulador Interactivo - turnos</title>
+</head>
+<body>
+<header>
+
+    <div class="hamburguesa">
+      
+        
+        <div class="logo"><img src="imagenes/logo.png" alt="logo barberapp"></div>   
+        
+        <nav id="menu" >
+                      
+          
+            <button id="llamamenu" title="abre / cierra el menu">
+               <i class="material-icons">menu</i>
+           </button>
+           <ul>
+               <li><a href="home.html">Home</a></li>
+               <li><a href="quienessomos.html">¿Quiénes somos?</a></li>
+               <li><a href="servicios.html">Servicios</a></li>
+               <li><a class="active" href="turnos.html"><u>Turnos</u></a></li>
+               <li><a href="contacto.html">Contacto</a></li>
+               <li><span id="span" class="spanusu"> </span></li>
+               <li><button id="salir" class="btnsalir">Cerrar sesión</button></li>
+           </ul>
+       </nav>
+ </div>
+
+</header>
+
+ <main>
+
+    <div class="formulario_turno">
+    <h2 class="titurnos">Turnos</h2>
+    <h4 class="subtiturnos">¿Querés sacar turno para tu cambio de look?<br>
+        ¡Es muy fácil! Seguí las indicaciones que figuran acá abajo.</h4>
+
+    <p class="serv">Seleccione el servicio que desee hacerse:<p>
+    <p class="check">
+        <label for="corte">- Corte de cabello</label>
+        <input type="checkbox" name="corte" id="corte" value="corte">
+    </p>
+
+    <p class="check">
+        <label for="barba">- Arreglo de barba</label>
+        <input type="checkbox" name="barba" id="barba" value="barba">
+    </p>
+
+    <p class="check">
+        <label for="afeitado">- Afeitado italiano</label>
+        <input type="checkbox" name="afeitado" id="afeitado" value="afeitado">
+    </p>
+
+
+    <p class="check">
+        <label for="color">- Coloración</label>
+        <input type="checkbox" name="color" id="color" value="color">
+    </p>
+
+    <p class="serv">Seleccione el día:<p>
+        <label for="dia" class="labelturno">Día</label>
+            <select id="dia" class="selecturno">
+                <option value="0">Seleccione una opción</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sábado</option>
+                
+              </select>
+              <p class="acl">(*) Recordá que los lunes no abrimos ¡disculpá las molestias!<p></p>
+
+
+      <p class="serv">Seleccione el rango horario:<p>
+        <label for="horario" class="labelturno">Horarios</label>
+            <select id="horario" class="selecturno">
+                <option value="0">Seleccione una opción</option>
+                <option value="mañana">10-13 hs.</option>
+                <option value="tarde">13-17 hs.</option>
+                <option value="noche">17-20 hs.</option>
+              </select>
+<br>
+<br>
+<button id="aceptar" class="btnacept">Aceptar</button>
+
+    <center>
+        <br>
+        <span id="span2" class="span" style="color:white;"></span>
+    </center>
+
+</div>
+
+    <script src="turnos.js"></script>
+
+</main>
+
+<!-- <footer>
+
+    <div class= "redes">
+            <a href="redesociales"><img src="imagenes/redes.png"></a> 
+        </div>
+            
+
+            <div class= "foots">
+            <div class="foot1">
+                <h4>Nosotrxs</h4>
+                <li><a href="quienessomos.html" class="foot12">¿Quiénes somos?</a></li>
+                <li><a href="" class="foot12">Blogspot</a></li>
+
+            </div>
+
+            <div class="foot2">
+                <h4>¿Qué querés hacerte?</h4>
+                <li><a href="servicios.html" class="foot12">Servicios</a></li>
+                <li><a href="turnos.html" class="foot12">Turnos</a></li>
+
+            </div>
+
+            <div class="foot3">
+                <h4>Ayuda</h4>
+                <li><a href="contacto.html" class="foot12">Contacto</a></li>
+
+            </div>
+        </div>
+
+        <hr class="linea"/>
+        <p class="pie">© 2021 - Todos los derechos reservados</p>
+                 </footer> -->
+                 </body>
+</html>

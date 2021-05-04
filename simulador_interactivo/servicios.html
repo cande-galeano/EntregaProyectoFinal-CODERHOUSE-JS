@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="servicios.css"rel="stylesheet">
+
+    
+
+    <title>Simulador Interactivo - servicios</title>
+</head>
+<body>
+    <header>
+
+
+        <div class="hamburguesa">
+          
+            
+            <div class="logo"><img src="imagenes/logo.png" alt="logo barberapp"></div>   
+            
+            <nav id="menu" >
+                          
+              
+                <button id="llamamenu" title="abre / cierra el menu">
+                   <i class="material-icons">menu</i>
+               </button>
+               <ul>
+                   <li><a href="home.html">Home</a></li>
+                   <li><a href="quienessomos.html">¿Quiénes somos?</a></li>
+                   <li><a class="active" href="servicios.html"><u>Servicios</u></a></li>
+                   <li><a href="turnos.html">Turnos</a></li>
+                   <li><a href="contacto.html">Contacto</a></li>
+                   <li><span id="span" class="spanusu">Usuario: </span></li>
+                   <li><button id="salir" class="btnsalir">Cerrar sesión</button></li>
+               </ul>
+           </nav>
+     </div>
+
+   </header>
+   <main>
+
+    <h2 class="tituloserv">Servicios</h2>
+
+    <div class="serv">
+        <p>
+            En BarberApp trabajamos con citas para brindar el tiempo <br> 
+            y asesoramiento necesario a cada cliente las cuales pueden ser solicitadas telefónicamente o por acá, <br>
+            a través de nuestra web. <br>
+        </p>
+        <button class= "btnturno"><a href="turnos.html">Solicitar turno</a></button>
+    </div>
+
+<div class="tiposserv">
+    <div class="serv1"><h4 class="titserv">Corte de cabello</h4>
+    <p class="servp">
+        Corte de cabello con lavado <br>
+        incluído y terminaciones a <br>
+        navaja. <br>
+    </p>
+        <button id="btnprecio1" class= "btnprecio">Ver precio</button>
+    <p id="precio1" class="precio">$200</p>
+    <img src="imagenes/tijeras.png" id= "servs1" class="servcorte" alt="corte">
+    </div>
+
+    <div class="serv2"><h4 class="titserv">Arreglo de barba</h4>
+        <p class="servp">
+            Arreglo de barba con fomento caliente y frío. <br>
+            Terminaciones a navaja y productos para el <br>
+            cuidado de tu piel y barba. <br>
+        </p>
+
+        <button id="btnprecio2" class= "btnprecio">Ver precio</button>
+        <p id="precio2" class="precio">$300</p>
+        <img src="imagenes/beard.png" id= "servs2" class="servbarba" alt="barba">
+
+    </div>
+    
+    <div class="serv3"><h4 class="titserv">Afeitado italiano (clásico)</h4>
+            <p class="servp">
+                Afeitado italiano con dos toallas caliente, <br>
+                una fría, aceites aromáticos y productos <br>
+                para el cuidado de la piel. <br>
+            </p>
+            <button id="btnprecio3" class= "btnprecio">Ver precio</button>
+            <p id="precio3" class="precio">$250</p>
+            <img src="imagenes/afeitar.png" id= "servs3" class="servafeitado" alt="afeitado">
+            </div>
+
+    <div class="serv4"><h4 class="titserv">Coloración</h4>
+            <p class="servp">
+                Elección del tono justo para tu estilo, <br>
+                amplia gama de colores (solicitar <br>
+                muestrario en recepción). <br>
+            </p>
+            <button id="btnprecio4" class= "btnprecio">Ver precio</button>
+            <p id="precio4" class="precio">$800</p>
+            <img src="imagenes/hair-dye.png" id= "servs4" class="servcolor" alt="color">
+            
+        </div>
+
+</div>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    let obj = JSON.parse(localStorage.getItem('logueado'));
+    let mail = obj['mail'];
+    let obj2 = JSON.parse(localStorage.getItem('user')) || [] ;
+    let nombre;
+    let apellido;
+    for(let i = 0; i < obj2.length; i++){
+    if(obj2[i].mail == mail){
+    nombre=obj2[i].nombre;
+    apellido=obj2[i].apellido;
+    }
+   
+}  
+    if(nombre != undefined && apellido != undefined)
+    {
+    let span = document.getElementById("span");
+    span.innerHTML += nombre + " " + apellido ;
+    span.style.setProperty('font-size', '15px');
+    span.style.setProperty('color', '#E43813');
+    span.style.setProperty('font-weight', '600');
+
+
+}
+
+let Boton = document.getElementById("salir");
+Boton.addEventListener("click", myFunction);
+function myFunction(e)  {
+    e.preventDefault();
+    let obj = JSON.parse(localStorage.getItem('logueado'));
+    let mail = obj['mail'];
+    let contrasena = obj['contrasena'];
+    console.log(mail);
+    localStorage.removeItem('logueado');
+    location.href="login.html";
+}
+
+$(document).ready(function(){
+    $("#precio1").hide();
+    $("#servs1").hide();
+$("div.serv1 #btnprecio1").click(function() {
+  $("#precio1").slideToggle("slow");
+  $("#servs1").slideToggle("slow");
+});
+
+$("#precio2").hide();
+    $("#servs2").hide();
+$("div.serv2 #btnprecio2").click(function() {
+  $("#precio2").slideToggle("slow");
+  $("#servs2").slideToggle("slow");
+});
+
+$("#precio3").hide();
+    $("#servs3").hide();
+$("div.serv3 #btnprecio3").click(function() {
+  $("#precio3").slideToggle("slow");
+  $("#servs3").slideToggle("slow");
+});
+
+$("#precio4").hide();
+    $("#servs4").hide();
+$("div.serv4 #btnprecio4").click(function() {
+  $("#precio4").slideToggle("slow");
+  $("#servs4").slideToggle("slow");
+});
+});
+
+</script>
+
+   </main>
+   <footer>
+
+    <div class= "redes">
+            <a href="redesociales"><img src="imagenes/redes.png"></a> 
+        </div>
+            
+
+            <div class= "foots">
+            <div class="foot1">
+                <h4>Nosotrxs</h4>
+                <li><a href="quienessomos.html" class="foot12">¿Quiénes somos?</a></li>
+                <li><a href="" class="foot12">Blogspot</a></li>
+
+            </div>
+
+            <div class="foot2">
+                <h4>¿Qué querés hacerte?</h4>
+                <li><a href="servicios.html" class="foot12">Servicios</a></li>
+                <li><a href="turnos.html" class="foot12">Turnos</a></li>
+
+            </div>
+
+            <div class="foot3">
+                <h4>Ayuda</h4>
+                <li><a href="contacto.html" class="foot12">Contacto</a></li>
+
+            </div>
+        </div>
+
+        <hr class="linea"/>
+        <p class="pie">© 2021 - Todos los derechos reservados</p>
+                 </footer>  
+</body>
+</html>

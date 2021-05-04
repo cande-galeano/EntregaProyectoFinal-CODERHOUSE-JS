@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="registro.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    
+    <title>Simulador Interactivo - registro</title>
+</head>
+<body>
+
+	<h2 class="title">¡Bienvenidx a <span class="naranja">BarberApp</span>!</h2>
+    
+    <div class="container">
+
+        <form action="#" name="registration"  method="post">
+      
+			<span class="input-group-text"><i class="fas fa-user"></i></span>
+          <label for="firstname">NOMBRE</label>
+          <input type="text" name="NOMBRE" id="NOMBRE" placeholder="Indique su nombre completo">
+      
+          <label for="lastname">APELLIDO</label>
+          <input type="text" name="APELLIDO" id="APELLIDO" placeholder="Indique su apellido">
+
+		  <label for="telephone">TELÉFONO</label>
+          <input type="text" name="TELEFONO" id="TELEFONO" placeholder="Indique su número de teléfono">
+      
+          <label for="email">EMAIL</label>
+          <input type="email" name="EMAIL" id="EMAIL" placeholder="email@email.com">
+      
+          <label for="password">CONTRASEÑA</label>
+          <input type="password" name="CONTRASENA" id="CONTRASENA" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+          <br>
+          <center><span id="span" class="span" style="color:white;"></span></center>
+
+                
+          <button type="submit" id = "btnInicio">CREAR CUENTA</button>
+          <div class="preg1" style="color:white; font-weight: 200; text-align: center; margin-top: 1em;"> 
+            ¿Ya tenés cuenta? <br> <a href="login.html" style="color:white;text-decoration-line: underline; font-weight: 400; text-align: center;" class="preg1">Iniciá sesión</a>
+          </div>
+        </form>
+
+        
+      
+      </div>
+
+
+    <script src="registro.js"></script>
+    
+</body>
+</html>
